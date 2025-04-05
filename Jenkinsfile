@@ -25,13 +25,4 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Clean up Docker container after the pipeline
-            script {
-                sh 'docker stop flask-app-container || true'
-                sh 'docker rm flask-app-container || true'
-            }
-        }
-    }
-}
+ 
